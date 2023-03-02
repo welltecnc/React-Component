@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+import logo from './';
 import './App.css';
+import Cabecalho from './componentes/Cabecalho'
+import Carros from './componentes/Carros'
+import Parceiros from './componentes/Parceiros'
 
-function App() {
+
+export default function App() {
+
+  let tituloCab="Loja de Veiculos"
+  let parag="Seja bem vindo a loja"
+  let carros =['BMW','PORSHI','AUDI','MERCEDES']
+  let parce="Nossos Parceiros"
+  let total = 2 + 5
+  let link = "http://www.google.com.br"
+ 
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Cabecalho tituloCab={tituloCab}parag={parag}/>
+      <Carros carros={carros}/>
+      <Parceiros parce ={parce} total={total} link={link}/>
+    
+    </>
   );
 }
 
-export default App;
+
